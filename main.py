@@ -43,7 +43,7 @@ def photo_handler(update: Update, context: CallbackContext):
     insta_bot.login(username=username, password=password)
 
     photo_file = update.message.photo[-1].get_file()
-    file_path = f"downloads/{photo_file.file_id}.jpg"
+    file_path = f"./{photo_file.file_id}.jpg"
     photo_file.download(file_path)
 
     # رفع الصورة إلى إنستقرام
